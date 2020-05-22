@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "-I$HOME/.projpack/include -Wl,-rpath=$HOME/.projpack/lib -L$HOME/.projpack/lib" 
