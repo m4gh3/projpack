@@ -1,2 +1,15 @@
 #!/bin/sh
-echo "-I$HOME/.projpack/include -Wl,-rpath=$HOME/.projpack/lib -L$HOME/.projpack/lib" 
+case $1 in
+	"-i")
+		echo "-I$HOME/.projpack/include -Wl,-rpath=$HOME/.projpack/lib -L$HOME/.projpack/lib" 
+	;;
+	"-l")
+		echo "-Wl,-rpath=$HOME/.projpack/lib -L$HOME/.projpack/lib"
+	;;
+	"-il")
+		echo "-I$HOME/.projpack/include -Wl,-rpath=$HOME/.projpack/lib -L$HOME/.projpack/lib"
+	;;
+	"-li")
+		echo "-I$HOME/.projpack/include -Wl,-rpath=$HOME/.projpack/lib -L$HOME/.projpack/lib" 
+	;;
+esac
